@@ -59,7 +59,7 @@ namespace WebAPI.Controllers
             }
         }
 
-        [HttpPut("{id}")]
+        [HttpPost("{id}")]
         public IActionResult EditUser(EditUserRequest editUserRequest, String id)
         {
             _userSevice.UpdateUser(editUserRequest, id);
@@ -72,5 +72,6 @@ namespace WebAPI.Controllers
             _userSevice.DeleteUser(id);
             return Ok();
         }
+
     }
 }

@@ -23,7 +23,7 @@ builder.Services.AddValidatorsFromAssemblyContaining<WebAPI.Application.Validati
 builder.Services.AddScoped<IUserSevice, UserService>();
 builder.Services.AddScoped<IValidator<CreateUserRequest>, UserValidation>();
 
-
+builder.Services.AddCors();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
