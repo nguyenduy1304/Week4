@@ -1,11 +1,9 @@
 ﻿using AutoMapper;
 using FluentValidation;
 using FluentValidation.Results;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebAPI.Application.Interfaces;
 using WebAPI.Contract.Requests;
-using WebAPI.Persistence.DataContext;
 
 namespace WebAPI.Controllers
 {
@@ -30,12 +28,11 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Index(int? pageNumber)
         {
-            var user = _userSevice.GetUsers();
+            var user = _userSevice.GetUsers(pageNumber ?? 1);
             return Ok(user);
         }
-
 
         [HttpGet("{id}")]
         public IActionResult GetUserById(String id)
@@ -43,6 +40,7 @@ namespace WebAPI.Controllers
             var user = _userSevice.GetUserByID(id);
             return Ok(user);
         }
+
         [HttpPost]
         public IActionResult CreateUser(CreateUserRequest createUserRequest)
         {

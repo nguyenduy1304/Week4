@@ -10148,11 +10148,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\NguyenThanhDuy\\DemoRefit\\DemoRefit\\DemoRefit.csproj",
+      "projectUniqueName": "C:\\NguyenThanhDuy\\Week4\\DemoRefit\\DemoRefit\\DemoRefit.csproj",
       "projectName": "DemoRefit",
-      "projectPath": "C:\\NguyenThanhDuy\\DemoRefit\\DemoRefit\\DemoRefit.csproj",
+      "projectPath": "C:\\NguyenThanhDuy\\Week4\\DemoRefit\\DemoRefit\\DemoRefit.csproj",
       "packagesPath": "C:\\Users\\duy.nguyen\\.nuget\\packages\\",
-      "outputPath": "C:\\NguyenThanhDuy\\DemoRefit\\DemoRefit\\obj\\",
+      "outputPath": "C:\\NguyenThanhDuy\\Week4\\DemoRefit\\DemoRefit\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

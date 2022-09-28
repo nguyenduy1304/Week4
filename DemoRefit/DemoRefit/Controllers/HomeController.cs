@@ -24,9 +24,9 @@ namespace DemoRefit.Controllers
             userClient = RestService.For<IUserClient>("https://localhost:7088");
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int? pageNumber)
         {
-            var user = userClient.GetAllUser().GetAwaiter().GetResult();
+            var user = userClient.GetAllUser(pageNumber ?? 1).GetAwaiter().GetResult();
             return View(user);
         }
 
@@ -55,14 +55,12 @@ namespace DemoRefit.Controllers
         public async Task<IActionResult> EditUser(String id)
         {
             var userid =await userClient.GetUser(id);
-            ViewBag.UserId = id;
-
             return View(userid);
         }
+
         [HttpPost]
-        public async Task<IActionResult> EditUsers(EditUserRequest editUserRequest, String id)
+        public async Task<IActionResult> Edit(EditUserRequest editUserRequest, String id)
         {
-            ViewBag.UserId = id;
             await userClient.UpdateUser(editUserRequest, id);
             return RedirectToAction("Index");
 

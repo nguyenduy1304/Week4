@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Uq6vlg0ooPZOTpn0+rx+ISrHiEJqrSvjz5LDSScCWX7iEmypnxCbhZ4vg8hVupWLGHR5mSMD7EYC97AjWTSw/A==",
+  "dgSpecHash": "zPY6Ze3353IcGOZ+rTqr36QcdoBFv+6MPVuXl4zTfW3Hcr97YOkVFIEc46xtwSVN2BeyUING2PKeYUHXKQoyHg==",
   "success": true,
-  "projectFilePath": "C:\\NguyenThanhDuy\\DemoRefit\\DemoRefit\\DemoRefit.csproj",
+  "projectFilePath": "C:\\NguyenThanhDuy\\Week4\\DemoRefit\\DemoRefit\\DemoRefit.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\duy.nguyen\\.nuget\\packages\\fluentvalidation\\11.2.1\\fluentvalidation.11.2.1.nupkg.sha512",
     "C:\\Users\\duy.nguyen\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",

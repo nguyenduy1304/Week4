@@ -1,4 +1,4 @@
-﻿@model IEnumerable<DemoRefit.Models.UserClient>
+﻿@model PaginatedList<DemoRefit.Models.UserClient>
 
 @{
     ViewData["Title"] = "Index";
@@ -36,32 +36,62 @@
             <th></th>
         </tr>
     </thead>
-    <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model.List) {
+        <tbody>
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Username)
+                @item.Username
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Email)
+                @item.Email
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Password)
+                @item.Password
             </td>
             <td>
-                    @item.FirstName @item.LastName
+                 @item.FirstName @item.LastName
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PhoneNumber)
+                @item.PhoneNumber
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Address)
+                @item.Address
             </td>
             <td>
                     @Html.ActionLink("Edit", "EditUser", new { id=item.Id }) |
                 @Html.ActionLink("Delete", "DeleteUser", new { id=item.Id })
             </td>
         </tr>
-}
     </tbody>
+    }
 </table>
+
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+<a asp-action="Index"
+   asp-route-pageNumber="@(Model.PageIndex - 1)"
+   class="btn btn-default @prevDisabled">
+    &laquo;
+</a>
+@for (int i = 1; i < Model.TotalPages + 1; i++)
+{
+    if (Model.PageIndex == i)
+    {
+        <b class="pagefocus">@i.ToString()</b>
+    }
+    else
+    {
+        <a asp-action="Index" asp-route-pageNumber="@i.ToString()" class="pagenum">
+            @i.ToString()
+        </a>
+    }
+}
+<a asp-action="Index"
+   asp-route-pageNumber="@(Model.PageIndex + 1)"
+   class="btn btn-default @nextDisabled">
+    &raquo;
+</a>
+
+

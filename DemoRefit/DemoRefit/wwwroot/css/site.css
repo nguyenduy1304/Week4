@@ -16,3 +16,28 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.pagenum {
+    color: #fff;
+    background: radial-gradient(black, transparent);
+    display: inline-block;
+    text-decoration: none;
+    padding: 0 10px;
+    border-radius: 50%;
+}
+
+.pagefocus {
+    color: #fff;
+    background: repeating-linear-gradient(45deg, black, transparent 100px);
+    display: inline-block;
+    text-decoration: none;
+    padding: 0 10px;
+    border-radius: 50%;
+}
+.btn-default{
+    font-size:40px
+}
+.btn {
+    vertical-align: sub;
+    line-height: 30px;
+}

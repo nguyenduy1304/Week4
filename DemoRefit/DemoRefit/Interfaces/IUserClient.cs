@@ -12,11 +12,11 @@ namespace DemoRefit.Interfaces
         [Post("/api/home")]
         Task CreateUser(CreateUserRequest createUserRequest);
 
-        [Put("/api/home/{id}")]
-        Task UpdateUser(EditUserRequest  editUserRequest, String id);
+        [Post("/api/home/{id}")]
+        Task UpdateUser(EditUserRequest editUserRequest, String id);
 
         [Get("/api/home")]
-        Task<List<UserClient>> GetAllUser();
+        Task<PaginatedList<UserClient>> GetAllUser(int? pageNumber);
 
         [Delete("/api/home/{id}")]
         Task DeleteUser(String id);

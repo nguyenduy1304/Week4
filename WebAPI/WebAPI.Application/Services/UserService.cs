@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using WebAPI.Application.Interfaces;
+using WebAPI.Contract.Constant;
 using WebAPI.Contract.Requests;
 using WebAPI.Contract.Response;
 using WebAPI.Persistence.DataContext;
@@ -21,15 +22,17 @@ namespace WebAPI.Application.Services
             _mapper = mapper;
         }
 
-        public List<GetUserResponse> GetUsers()
+        public PaginatedList<GetUserResponse> GetUsers(int? pageNumber)
         {
-            var user = _context.User.Include(c => c.UserDetail).AsNoTracking().ToList();
-            return _mapper.Map<List<GetUserResponse>>(user);
+            int pageSize = 2;
+            var user = _context.User.Include(c => c.UserDetail).AsQueryable();
+            var userResponse = user.Select(u=> _mapper.Map<GetUserResponse>(u));
+            return PaginatedList<GetUserResponse>.CreateAsync(userResponse.AsNoTracking(), pageNumber ?? 1, pageSize);
         }
 
         public GetUserResponse GetUserByID(string id)
         {
-            var user = _context.User.Include(c => c.UserDetail).SingleOrDefault(c => c.Id.Equals(id));
+            var user = _context.User.Include(c => c.UserDetail).FirstOrDefault(c => c.Id.Equals(id));
             return _mapper.Map<GetUserResponse>(user);
         }
 
@@ -47,7 +50,7 @@ namespace WebAPI.Application.Services
 
         public void UpdateUser(EditUserRequest editUserRequest, string id)
         {
-            var user = _context.User.Include(c => c.UserDetail).SingleOrDefault(c => c.Id.Equals(id));
+            var user = _context.User.Include(c => c.UserDetail).FirstOrDefault(c => c.Id.Equals(id));
             user = _mapper.Map<EditUserRequest, User>(editUserRequest, user);
             _context.SaveChanges();
         }
