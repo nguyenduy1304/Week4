@@ -38,11 +38,12 @@ namespace WebAPI.Application.Services
 
         public string CreateUser(CreateUserRequest createUserRequest)
         {
+
             var _mappedUser = _mapper.Map<User>(createUserRequest);
+
 
             _mappedUser.Id = Guid.NewGuid().ToString();
             _mappedUser.UserDetail.IdUser = _mappedUser.Id;
-
             _context.User.Add(_mappedUser);
             _context.SaveChanges();
             return _mappedUser.Id;

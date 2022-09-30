@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cBfLbEdAYbxHAqurOf3ZyCpZ1Z+5pi+zf+xYehyMMjladuQwizJ7IQ+JOiaLhC8CHh9uNXShExin4gjb/IGSYQ==",
+  "dgSpecHash": "1s3jJxztyPmSDUfexIaNaLwdnPeWDTAv60gBxV4GJy8lKW65iqJkmzDIx6vt+rwQ9WMK+7z0aBSycMr0FKRnKQ==",
   "success": true,
   "projectFilePath": "C:\\NguyenThanhDuy\\Week4\\WebAPI\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,8 @@
     "C:\\Users\\duy.nguyen\\.nuget\\packages\\fluentvalidation\\11.2.2\\fluentvalidation.11.2.2.nupkg.sha512",
     "C:\\Users\\duy.nguyen\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
     "C:\\Users\\duy.nguyen\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.2\\fluentvalidation.dependencyinjectionextensions.11.2.2.nupkg.sha512",
+    "C:\\Users\\duy.nguyen\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
+    "C:\\Users\\duy.nguyen\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning.apiexplorer\\5.0.0\\microsoft.aspnetcore.mvc.versioning.apiexplorer.5.0.0.nupkg.sha512",
     "C:\\Users\\duy.nguyen\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\duy.nguyen\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\duy.nguyen\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",

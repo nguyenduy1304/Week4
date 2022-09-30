@@ -1,23 +1,27 @@
 ﻿using AutoMapper;
 using FluentValidation;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Refit;
 using WebAPI.Application.Interfaces;
 using WebAPI.Contract.Requests;
 
-namespace WebAPI.Controllers
+namespace WebAPI.Controllers.V2
 {
-    [Route("api/[controller]")]
+    [ApiVersion("2.0")]
+    [ApiVersion("3.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
-    public class HomeController : ControllerBase
+    public class UsersController : ControllerBase
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<UsersController> _logger;
         private readonly IUserSevice _userSevice;
 
         public readonly IMapper _mapper;
         private IValidator<CreateUserRequest> _validator;
-        public HomeController(IUserSevice userSevice,
-                              ILogger<HomeController> logger,
+        public UsersController(IUserSevice userSevice,
+                              ILogger<UsersController> logger,
                               IMapper mapper,
                               IValidator<CreateUserRequest> validator)
         {
@@ -35,7 +39,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetUserById(String id)
+        public IActionResult GetUserById(string id)
         {
             var user = _userSevice.GetUserByID(id);
             return Ok(user);
@@ -58,14 +62,14 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("{id}")]
-        public IActionResult EditUser(EditUserRequest editUserRequest, String id)
+        public IActionResult EditUser(EditUserRequest editUserRequest, string id)
         {
             _userSevice.UpdateUser(editUserRequest, id);
             return Ok();
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteUser(String id)
+        public IActionResult DeleteUser(string id)
         {
             _userSevice.DeleteUser(id);
             return Ok();

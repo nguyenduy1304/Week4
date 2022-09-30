@@ -139,3 +139,5 @@ C:\NguyenThanhDuy\Week4\WebAPI\WebAPI\obj\Debug\net6.0\WebAPI.pdb
 C:\NguyenThanhDuy\Week4\WebAPI\WebAPI\obj\Debug\net6.0\WebAPI.genruntimeconfig.cache
 C:\NguyenThanhDuy\Week4\WebAPI\WebAPI\obj\Debug\net6.0\ref\WebAPI.dll
 C:\NguyenThanhDuy\Week4\WebAPI\WebAPI\bin\Debug\net6.0\Refit.dll
+C:\NguyenThanhDuy\Week4\WebAPI\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+C:\NguyenThanhDuy\Week4\WebAPI\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll

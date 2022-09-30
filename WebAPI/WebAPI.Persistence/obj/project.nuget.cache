@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "IVzlRcCIhgKfAT3L4wooEkrzYOd2W3BnsNmNfL7EG1BkZ5DZjZwkkzOO7PpKuEYa35gSQcDYyQOG188v2bT0Bg==",
+  "dgSpecHash": "MIlz9axrLGLcQs08TvjkTktstO5wAzKy8XkoO3KrVZkxiMoMzs5SNL9omyHjCkSZCyyci9GgHOn7S5ZcfyZ/ag==",
   "success": true,
   "projectFilePath": "C:\\NguyenThanhDuy\\Week4\\WebAPI\\WebAPI.Persistence\\WebAPI.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\duy.nguyen\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\duy.nguyen\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
+    "C:\\Users\\duy.nguyen\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning.apiexplorer\\5.0.0\\microsoft.aspnetcore.mvc.versioning.apiexplorer.5.0.0.nupkg.sha512",
     "C:\\Users\\duy.nguyen\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\duy.nguyen\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\duy.nguyen\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",

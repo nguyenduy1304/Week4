@@ -6,19 +6,19 @@ namespace DemoRefit.Interfaces
     [Headers("Content-Type: application/json")]
     public interface IUserClient
     {
-        [Get("/api/home/{id}")]
+        [Get("/api/v1/users/{id}")]
         Task<UserClient> GetUser(String id);
 
-        [Post("/api/home")]
+        [Post("/api/v1/users")]
         Task CreateUser(CreateUserRequest createUserRequest);
 
-        [Post("/api/home/{id}")]
+        [Post("/api/v1/users/{id}")]
         Task UpdateUser(EditUserRequest editUserRequest, String id);
 
-        [Get("/api/home")]
+        [Get("/api/v1/users")]
         Task<PaginatedList<UserClient>> GetAllUser(int? pageNumber);
 
-        [Delete("/api/home/{id}")]
+        [Delete("/api/v1/users/{id}")]
         Task DeleteUser(String id);
     }
 }
